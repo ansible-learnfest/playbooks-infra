@@ -1,0 +1,27 @@
+---
+ansible-navigator:
+  execution-environment:
+    environment-variables:
+      pass:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - AZURE_SECRET
+      - AZURE_CLIENT_ID
+      - AZURE_SUBSCRIPTION_ID
+      - AZURE_TENANT
+      - CONTROLLER_HOST
+      - CONTROLLER_USERNAME
+      - CONTROLLER_PASSWORD
+      - CONTROLLER_VERIFY_SSL
+      - GCP_AUTH_KIND
+      - GCP_PROJECT
+      - GCP_SERVICE_ACCOUNT_FILE
+      - K8S_AUTH_VERIFY_SSL
+      - K8S_AUTH_HOST
+      - K8S_AUTH_API_KEY
+      - OVIRT_HOSTNAME
+      - OVIRT_USERNAME
+      - OVIRT_PASSWORD
+    image: quay.io/redhat_emp1/ee-ansible-ssa
+    pull:
+      policy: missing
