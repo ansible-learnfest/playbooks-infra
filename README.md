@@ -4,7 +4,7 @@ Setup Playbooks to provision cloud infrastructure.
 
 ## aws_infra.yml
 
-- install the Execution Environment [ee-ansible-ssa](https://quay.io/repository/redhat_emp1/ee-ansible-ssa) from Quay - you will need an Red Hat account to sign in
+- install the Execution Environment [ee-ansible-ssa](https://quay.io/repository/redhat_emp1/ee-ansible-ssa) from Quay - you will need an Red Hat employee account to sign in
 
 - export your AWS credentials as environment variables:
 
