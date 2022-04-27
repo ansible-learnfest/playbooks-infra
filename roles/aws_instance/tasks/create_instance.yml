@@ -1,0 +1,10 @@
+---
+- name: set internal instance name
+  ansible.builtin.set_fact:
+    _instance_name: "{{ instance_name }}{{ item }}"
+
+- name: create each cloud instance "{{ _instance_name }}"
+  ansible.builtin.include_role:
+    name: ansible_ssa.general.instance
+  vars:
+    instance_name: "{{ _instance_name }}"

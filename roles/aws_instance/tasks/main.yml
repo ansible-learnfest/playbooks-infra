@@ -1,0 +1,5 @@
+---
+- name: create each cloud instance
+  loop:
+    "{{ range(1, instance_total+1 )|list }}"
+  ansible.builtin.include_tasks: create_instance.yml

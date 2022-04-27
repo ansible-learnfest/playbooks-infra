@@ -1,0 +1,5 @@
+---
+- name: setup AWS instances
+  hosts: localhost
+  roles:
+    - aws_instance

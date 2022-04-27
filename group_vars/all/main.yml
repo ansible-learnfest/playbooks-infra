@@ -1,0 +1,6 @@
+---
+# number of instances to deploy
+instance_total: 3
+
+# instance name, will automatically appneded by $index
+instance_name: cjung
