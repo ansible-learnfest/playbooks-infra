@@ -3,4 +3,7 @@
 instance_total: 3
 
 # instance name, will automatically appneded by $index
-instance_name: cjung
+instance_name: demo
+
+# provide SSH public key
+ec2_key_pair: '{{ lookup("file","~/.ssh/id_rsa.pub") }}'
