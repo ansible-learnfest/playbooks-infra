@@ -7,3 +7,6 @@ instance_name: demo
 
 # provide SSH public key
 ec2_key_pair: '{{ lookup("file","~/.ssh/id_rsa.pub") }}'
+
+# the VPC name for all instances
+ec2_vpc_name: demo

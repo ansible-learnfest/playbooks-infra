@@ -20,8 +20,6 @@ AWS_ACCESS_KEY_ID=
 
 Ideally you create your AWS account by using the "Open Environment" in [RHPDS](https://rhpds.redhat.com/service/explorer).
 
-- define SSH key pair
-
 - update [group_vars/all/main.yml](group_vars/all/main.yml) with your settings
 
 - run the playbook with [ansible-navigator](https://ansible-navigator.readthedocs.io/en/latest/)
