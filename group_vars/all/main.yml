@@ -10,3 +10,7 @@ ec2_key_pair: '{{ lookup("file","~/.ssh/id_rsa.pub") }}'
 
 # the VPC name for all instances
 ec2_vpc_name: demo
+
+# choose an instance flavor
+# for AAP the recommended value is t3-large
+instance_flavor: t3-large
