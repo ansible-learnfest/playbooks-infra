@@ -24,4 +24,4 @@ ansible-navigator:
       - OVIRT_PASSWORD
     image: quay.io/redhat_emp1/ee-ansible-ssa
     pull:
-      policy: missing
+      policy: always
