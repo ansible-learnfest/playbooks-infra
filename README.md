@@ -14,8 +14,8 @@ podman pull quay.io/redhat_emp1/ee-ansible-ssa
 - export your AWS credentials as environment variables:
 
 ```bash
-AWS_SECRET_ACCESS_KEY=
-AWS_ACCESS_KEY_ID=
+export AWS_SECRET_ACCESS_KEY=<secret-access-key>
+export AWS_ACCESS_KEY_ID=<access-key-id>
 ```
 
 Ideally you create your AWS account by using the "Open Environment" in [RHPDS](https://rhpds.redhat.com/service/explorer).
