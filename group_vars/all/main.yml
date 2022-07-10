@@ -5,6 +5,9 @@ instance_total: 3
 # instance name, will automatically appneded by $index
 instance_name: demo
 
+#
+# AWS
+#
 # provide SSH public key
 ec2_key_pair: '{{ lookup("file","~/.ssh/id_rsa.pub") }}'
 
@@ -14,3 +17,17 @@ ec2_vpc_name: demo
 # choose an instance flavor
 # for AAP the recommended value is t3.large
 instance_flavor: t3.large
+
+#
+# Azure
+#
+# provide Azure resource group name
+# IMPORTANT: match the details from RHPDS Open Environment, if use such an account!
+# Otherwise you will see permission denied errors!
+azure_resource_group:
+
+# your SSH public key which will be injected into your instance to grant you access as user "ansible"
+# IMPORTANT: they key has to be provided as one long string
+# example:
+# vault_azure_ssh_public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA4WsC0C/x1JQCvui1ex5mA2vVu9l ... truncated ..."
+azure_ssh_public_key:
