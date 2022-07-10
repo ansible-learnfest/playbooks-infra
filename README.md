@@ -25,15 +25,7 @@ Ideally you create your AWS account by using the "Open Environment" in [RHPDS](h
 - run the playbook with [ansible-navigator](https://ansible-navigator.readthedocs.io/en/latest/)
 
 ```bash
-ansible-navigator run aws-infra.yml
-```
-
-### Remove instances on AWS
-
-The [instance role](https://gitlab.com/ansible-ssa/role-instance) this Playbook is using, does also support removal by using the `remove=true` variable:
-
-```bash
-ansible-navigator run aws-infra.yml -e remove=true
+ansible-navigator run cloud-infra.yml
 ```
 
 ## azure_infra.yml
@@ -61,13 +53,13 @@ Ideally you create your Azure account by using the "Open Environment" in [RHPDS]
 - run the playbook with [ansible-navigator](https://ansible-navigator.readthedocs.io/en/latest/)
 
 ```bash
-ansible-navigator run azure-infra.yml
+ansible-navigator run cloud-infra.yml
 ```
 
-### Remove instances on Azure
+## Remove instances
 
 The [instance role](https://gitlab.com/ansible-ssa/role-instance) this Playbook is using, does also support removal by using the `remove=true` variable:
 
 ```bash
-ansible-navigator run azure-infra.yml -e remove=true
+ansible-navigator run cloud-infra.yml -e remove=true
 ```
