@@ -25,6 +25,14 @@ ec2_key_pair: '{{ lookup("file","~/.ssh/id_rsa.pub") }}'
 # the VPC name for all instances
 ec2_vpc_name: demo
 
+# which EC2 region to use
+# MANDATORY
+ec2_region: "eu-central-1"
+
+# Route53 domain
+# MANDATORY
+route53_domain: <your RHPDS route53 domain>
+
 #
 # Azure
 #
