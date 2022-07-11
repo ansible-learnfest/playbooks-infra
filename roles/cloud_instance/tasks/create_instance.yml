@@ -8,3 +8,18 @@
     name: ansible_ssa.general.instance
   vars:
     instance_name: "{{ _instance_name }}"
+
+- name: associate new elastic IPs with each of the instances
+  community.aws.ec2_eip:
+    device_id: "{{ item }}"
+  loop: "{{ ec2.instance_ids }}"
+
+- name: create Route53 DNS record
+  community.aws.route53:
+    state: present
+    zone: sandbox920.opentlc.com
+    record: controller
+    type: A
+    value: "{{ ec2.instances[0].public_ip_address }}"
+    ttl: 600
+    wait: true
