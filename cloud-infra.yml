@@ -1,0 +1,5 @@
+---
+- name: setup cloud instances
+  hosts: localhost
+  roles:
+    - cloud_instance
