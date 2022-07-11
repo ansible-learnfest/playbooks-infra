@@ -12,14 +12,21 @@
 - name: associate new elastic IPs with each of the instances
   community.aws.ec2_eip:
     device_id: "{{ item }}"
+    region: "{{ ec2_region }}"
   loop: "{{ ec2.instance_ids }}"
+  when:
+    - type == "ec2"
+    - not remove | bool
 
 - name: create Route53 DNS record
   community.aws.route53:
     state: present
-    zone: sandbox920.opentlc.com
-    record: controller
+    zone: "{{ route53_domain }}"
+    record: "{{ _instance_name }}.{{ route53_domain }}"
     type: A
     value: "{{ ec2.instances[0].public_ip_address }}"
     ttl: 600
     wait: true
+  when:
+    - type == "ec2"
+    - not remove | bool
