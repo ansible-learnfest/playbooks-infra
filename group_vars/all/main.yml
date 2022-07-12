@@ -34,7 +34,7 @@ ec2_region: "eu-central-1"
 
 # Route53 domain without leading .
 # MANDATORY
-route53_domain: sandbox1293.opentlc.com
+route53_domain: <your RHPDS route53 domain>
 
 #
 # Azure
