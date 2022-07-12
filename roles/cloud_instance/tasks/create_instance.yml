@@ -27,6 +27,7 @@
     value: "{{ ec2.instances[0].public_ip_address }}"
     ttl: 600
     wait: true
+    overwrite: true
   when:
     - type == "ec2"
     - not remove | bool
