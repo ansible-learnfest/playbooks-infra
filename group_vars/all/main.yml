@@ -32,7 +32,7 @@ ec2_vpc_name: demo
 # MANDATORY
 ec2_region: "eu-central-1"
 
-# Route53 domain with leading .
+# Route53 domain without leading .
 # MANDATORY
 route53_domain: <your RHPDS route53 domain>
 
