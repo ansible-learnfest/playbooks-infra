@@ -16,6 +16,9 @@ instance_name: demo
 # Standard_DS3 on Azure
 instance_flavor: t3.large
 
+# don't remove instances by default
+remove: false
+
 #
 # AWS
 #
