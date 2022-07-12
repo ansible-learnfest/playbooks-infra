@@ -5,9 +5,9 @@
 type: ec2
 
 # number of instances to deploy
-instance_total: 3
+instance_total: 5
 
-# instance name, will automatically appneded by $index
+# instance name, will automatically appended by index
 instance_name: demo
 
 # choose an instance flavor
@@ -29,7 +29,7 @@ ec2_vpc_name: demo
 # MANDATORY
 ec2_region: "eu-central-1"
 
-# Route53 domain
+# Route53 domain with leading .
 # MANDATORY
 route53_domain: <your RHPDS route53 domain>
 
